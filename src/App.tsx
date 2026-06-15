@@ -6,14 +6,17 @@ import Bulbasaur from "./assets/bulbasaur.png";
 
 const pokemonList = [
   {
+    id: 0,
     name: "Bulbasaur",
     imgSrc: Bulbasaur,
   },
   {
+    id: 1,
     name: "Mew",
     imgSrc: undefined
   },
   {
+    id: 2,
     name: "Guillaumechu de la WCS",
     imgSrc: QueteValidee,
   },
@@ -33,8 +36,9 @@ function App() {
   return (
     <div>
       <nav>
-        <button onClick={() => setPokemonName("Bulbasaur")} className="button">🔗 Bulbasaur</button>
-        <button onClick={() => setPokemonName("Mew")} className="button">🔗 Mew</button>
+        <button onClick={() => setPokemonName("Bulbasaur")} className="button"> Bulbasaur</button>
+        <button onClick={() => setPokemonName("Mew")} className="button"> Mew </button>
+        <button onClick={() => setPokemonName("Guillaumechu de la WCS")} className="button"> Guillaumechu </button>
       </nav>
       <PokemonCard pokemon={pokemon} />
     </div>
