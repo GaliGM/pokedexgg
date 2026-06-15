@@ -2,7 +2,7 @@ interface PokemonCardProps {
     pokemon: {
         imgSrc?: string;
         name: string;
-    }
+    };
 }
 
 function PokemonCard({ pokemon }: PokemonCardProps) {
