@@ -3,6 +3,7 @@ import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import QueteValidee from "./assets/QueteValidee.png";
 import NavBar from "./components/NavBar";
+import { useEffect } from "react";
 
 const pokemonList = [
   {
@@ -34,7 +35,11 @@ const pokemonList = [
   },
 ];
 
+let firstTime = false;
+
 function App() {
+  useEffect(() => { if (!firstTime) { alert('Hello pokemon trainer 😃 !!'); firstTime = true; } }, []);
+
   const [pokemonName, setPokemonName] = useState("bulbasaur");
 
   const pokemon = pokemonList.find((pokemon) => pokemon.name === pokemonName);
