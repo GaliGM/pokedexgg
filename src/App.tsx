@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import QueteValidee from "./assets/QueteValidee.png";
+import NavBar from "./components/NavBar";
 
 const pokemonList = [
   {
@@ -43,23 +44,12 @@ function App() {
   }
 
   return (
-
     <div>
-      <nav>
-        {pokemonList.map((pokemon) => (
-          <button
-            key={pokemon.name}
-            onClick={() => setPokemonName(pokemon.name)}
-            className="button"
-          >
-            <figcaption className="name-pokemon">{pokemon.name}</figcaption>
-          </button>
-        ))}
-
-      </nav>
+      <NavBar setPokemonName={setPokemonName} pokemonList={pokemonList} />
       <PokemonCard pokemon={pokemon} />
     </div >
   );
+
 }
 
 export default App;
